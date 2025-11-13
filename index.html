@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conhecimentos Locais</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Conhecimentos Locais</h1>
+    <div id="score">0 pontos</div>
+    <nav>
+      <button id="btnLei" onclick="loadCategory('lei_municipal')">Lei Municipal nº 2.156 2014</button>
+      <button id="btnAspectos" onclick="showAspectosOptions()">Aspectos históricos, geográficos, literários, políticos e culturais</button>
+      <button id="btnLeiOrganica" onclick="showLeiOrganicaOptions()">Lei Orgânica do Município de Caxias MA</button>
+      <button id="btnFinalizar" onclick="showPartialResults()" style="display: none;">FINALIZAR TESTE</button>
+    </nav>
+  </header>
+
+  <div id="aspectosOptions" style="display: none;"><button id="btnAspectos1" onclick="loadCategory('aspectos_arquivos_1')">Arquivos 1</button><button id="btnAspectos2" onclick="loadCategory('aspectos_arquivos_2')">Arquivos 2</button><button id="btnAspectos3" onclick="loadCategory('aspectos_arquivos_3')">Arquivos 3</button></div>
+  
+  <div id="leiOrganicaOptions" style="display: none;"><button id="btnLOMParte1" onclick="loadCategory('lei_organica_parte_1')">TÍTULO I - Das Disposições Preliminares</button><button id="btnLOMParte2" onclick="loadCategory('lei_organica_parte_2')">TÍTULO II - Do Poder Legislativo</button><button id="btnLOMParte3" onclick="loadCategory('lei_organica_parte_3')">TÍTULO III - Do Poder Executivo</button><button id="btnLOMParte4" onclick="loadCategory('lei_organica_parte_4')">TÍTULO IV - Da Organização do Governo Municipal</button><button id="btnLOMParte5" onclick="loadCategory('lei_organica_parte_5')">TÍTULO V - Da Administração Financeira</button><button id="btnLOMParte6" onclick="loadCategory('lei_organica_parte_6')">TÍTULO VI - Da Ordem Econômica e Social</button><button id="btnLOMParte7" onclick="loadCategory('lei_organica_parte_7')">TÍTULO VII - Das Disposições Gerais e Finais – artigos 148 a 155</button></div>
+  <main id="content">
+    <h3>Escolha uma das categorias acima para iniciar.</h3>
+    <h3>Ao finalizar todas as questões de uma categoria, ela ficará verde, pode clicar na próxima. </h3>
+   <h3>Ao responder pelo menos uma questão, o botão “FINALIZAR TESTE” fica disponível; basta clicar nos botões do menu (Aspectos ou Lei Orgânica) para que ele apareça. </h3>
+ <h3>PONTUAÇÃO: </br>Acertando na primeira tentativa - 5 pontos. </br> Acertando na segunda tentativa  - 4 pontos. </br> Acertando na terceira tentativa  - 3 pontos. </br> Acertando na quarta tentativa  - 2 pontos. </br> Acertando na quinta tentativa  - 2 pontos. </h3>
+ </main>
+
+  <footer>
+    2025 Conhecimentos Locais | Caxias é logo ali - Desistir NUNCA é uma opção!
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

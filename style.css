@@ -30,12 +30,10 @@ header h1 {
 
 nav {
   margin-top: 5px;
-  /* Alterado para permitir rolagem horizontal em telas pequenas */
-  overflow-x: auto; 
-  white-space: nowrap; /* Impede que os botões quebrem a linha */
+  overflow-x: hidden; 
   padding-bottom: 5px;
   max-width: 100%;
-  display: block; /* Garante que a rolagem funcione */
+  display: block;
 }
 
 nav button {
@@ -49,10 +47,8 @@ nav button {
   font-weight: bold;
   transition: all 0.3s;
   font-size: 0.8em;
-  /* Mantido inline-block para rolagem horizontal */
-  display: inline-block; 
+  display: inline-block;
   white-space: normal;
-  /* Mínima largura para cliques mais fáceis */
   min-width: 100px;
 }
 
@@ -87,7 +83,7 @@ nav #btnFinalizar {
   font-size: 0.9em;
   display: inline-block;
   white-space: normal;
-  min-width: 120px; /* Garante que o botão Finalizar seja visível */
+  min-width: 120px;
 }
 
 nav #btnFinalizar:hover {
@@ -158,8 +154,7 @@ nav #btnFinalizar:hover {
 
 
 main {
-  /* Reduzido o padding horizontal para celular */
-  padding: 10px 15px;
+  padding: 10px 15px; 
   flex-grow: 1;
   text-align: center;
   overflow-y: auto;
@@ -353,63 +348,59 @@ ul li {
   transform: scale(1.03);
 }
 
-/* --- MEDIA QUERY PARA CELULAR (MAX-WIDTH: 600PX) --- */
+
 
 @media (max-width: 600px) {
-    /* Ajustes na navegação principal para rolagem horizontal */
+  
     nav {
-        /* Desativa o wrap da media query anterior para usar a rolagem */
-        display: block; 
-        overflow-x: auto;
-        white-space: nowrap; 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        overflow-x: hidden;
     }
 
     nav button {
-        /* Define os botões para ficar lado a lado com largura mínima */
-        display: inline-block; 
-        white-space: normal;
-        margin: 3px 5px; 
-        width: auto;
-        min-width: 100px;
-        box-sizing: border-box;
+        display: block; 
+        width: 48%; 
+        margin: 3px 1%; 
+        box-sizing: border-box; 
+        font-size: 0.75em;
+        min-width: unset; 
     }
     
-    /* Garante que o botão Finalizar fique alinhado com os demais se visível */
     nav #btnFinalizar {
-        display: inline-block;
-        width: auto;
-        min-width: 120px;
-        margin: 3px 5px !important;
+        width: 98%; 
+        max-width: 300px;
+        margin: 5px auto !important;
+        display: block;
     }
 
     header h1 {
         font-size: 1.4em;
     }
 
-    /* Opciones de Categorias (Aspectos/Lei Orgânica) */
     #aspectosOptions button, #leiOrganicaOptions button {
-        width: 95%; /* Aumenta a largura para facilitar o toque */
-        padding: 12px 15px; /* Reduz o padding para economizar espaço vertical */
+        width: 95%; 
+        padding: 12px 15px;
         font-size: 0.9em;
         margin: 5px auto;
         max-width: none;
     }
 
-    /* Conteúdo principal com menos margem */
+  
     main {
       padding: 10px 10px;
     }
 }
 
-/* --- MEDIA QUERY PARA DESKTOP (MIN-WIDTH: 600PX) --- */
+
 
 @media (min-width: 601px) {
-    /* Restaura o padding do main para desktop */
     main {
         padding: 2px 100px;
     }
     
-    /* Restaura o layout dos botões de ação para linha no desktop */
+
     .result-actions {
         flex-direction: row; 
         justify-content: center;

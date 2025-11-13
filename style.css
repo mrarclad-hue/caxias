@@ -30,7 +30,7 @@ header h1 {
 
 nav {
   margin-top: 5px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   padding-bottom: 5px;
   max-width: 100%;
   display: block;
@@ -351,12 +351,19 @@ ul li {
 
 
 @media (max-width: 600px) {
-  
+    header {
+
+        padding: 10px 0; 
+    }
+    
     nav {
         display: flex;
         flex-wrap: wrap; 
         justify-content: center;
         overflow-x: hidden;
+
+        padding: 0 5px 5px; 
+        box-sizing: border-box; 
     }
 
     nav button {
@@ -368,6 +375,7 @@ ul li {
         min-width: unset; 
     }
     
+
     nav #btnFinalizar {
         width: 98%; 
         max-width: 300px;
@@ -387,7 +395,7 @@ ul li {
         max-width: none;
     }
 
-  
+
     main {
       padding: 10px 10px;
     }
@@ -396,11 +404,14 @@ ul li {
 
 
 @media (min-width: 601px) {
+ 
+    header {
+        padding: 10px 15px;
+    }
     main {
         padding: 2px 100px;
     }
     
-
     .result-actions {
         flex-direction: row; 
         justify-content: center;
